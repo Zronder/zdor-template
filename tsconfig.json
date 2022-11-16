@@ -73,7 +73,7 @@
         "outDir": "dist",
         // "outFile": "build.js",
         "target": "ES5",
-        "module": "esnext",
+        "module": "CommonJS",
         "moduleResolution": "node",
         "allowJs": false,
         "strict": true,
@@ -82,7 +82,6 @@
         "resolveJsonModule": true,
         "esModuleInterop": true,
         "removeComments": true,
-        "jsx": "react",
         "declaration": true,
         "lib": ["esnext", "dom"],
     }
