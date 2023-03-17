@@ -1,27 +1,23 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "declaration": false,
-        "removeComments": true,
-        "emitDecoratorMetadata": true,
-        "experimentalDecorators": true,
-        "allowSyntheticDefaultImports": true,
-        "target": "es2017",
-        "sourceMap": false,
-        "outDir": "./dist",
-        "baseUrl": "./",
-        "incremental": true,
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
         "skipLibCheck": true,
-        "strictNullChecks": false,
-        "noImplicitAny": false,
-        "strictBindCallApply": false,
-        "forceConsistentCasingInFileNames": false,
-        "noFallthroughCasesInSwitch": false,
-        "rootDir": ".",
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "incremental": true,
         "paths": {
-            "@service/*": ["src/service/*"],
-            "@utils/*": ["src/utils/*"],
-            "@config/*": ["config/*"]
+            "@/*": ["./src/*"]
         }
-    }
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"]
 }
