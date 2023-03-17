@@ -1,0 +1,41 @@
+{
+    "name": "@zdor/zdor-server",
+    "version": "1.0.0",
+    "description": "",
+    "author": "",
+    "private": true,
+    "types": "dist/zdor-server.d.ts",
+    "bugs": {
+        "url": "https://github.com/ypf0088/zdor/issues"
+    },
+    "homepage": "https://github.com/ypf0088/zdor/tree/master/packages/zdor-server#readme",
+    "scripts": {
+    },
+    "dependencies": {
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^16.2.3",
+        "@commitlint/config-conventional": "^16.2.1",
+        "@typescript-eslint/eslint-plugin": "^5.0.0",
+        "@typescript-eslint/parser": "^5.0.0",
+        "@zdor/zdor-shared": "^1.0.0",
+        "cross-env": "^7.0.3",
+        "dotenv": "^16.0.0",
+        "eslint": "^8.0.1",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-prettier": "^4.0.0",
+        "husky": "^7.0.0",
+        "lint-staged": "^12.3.7",
+        "prettier": "^2.3.2",
+        "typescript": "^4.3.5"
+    },
+    "lint-staged": {
+        "*": [
+            "prettier --write --ignore-unknown"
+        ],
+        "src/**/*.{js,ts,tsx}": [
+            "eslint --cache --fix"
+        ]
+    },
+    "license": "MIT"
+}
