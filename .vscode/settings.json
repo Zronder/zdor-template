@@ -64,13 +64,13 @@
         "moveCursor": true
     },
     "fileheader.customMade": {
-        "Author": "zdor",
-        "LastEditors": "your name",
+        "Author": "git config user.email",
+        "LastEditors": "git config user.email",
         "Date": "Do not edit",
         "LastEditTime": "Do not edit",
         "FilePath": "no item name",
-        "Description": "file content",
-        "custom_string_obkoro1_copyright": "Copyright (C) ${now_year} zdor. All rights reserved."
+        "Description": "",
+        "custom_string_obkoro1_copyright": "Copyright (C) ${now_year} by ${git_name_email} All rights reserved."
     },
     "fileheader.cursorMode": {
         "description": "",

@@ -1,0 +1,20 @@
+#page_testFormPage {
+    width: 600px;
+    padding-top: 50px;
+    padding-right: 50px;
+
+    .ant-form-item-label > label {
+        padding-right: 15px;
+        min-width: 100px;
+        display: inline-block;
+        min-height: 32px;
+        line-height: 32px;
+    }
+}
+
+@media screen and (max-width: 660px) {
+    #page_testFormPage {
+        width: 100%;
+        padding: 15px;
+    }
+}

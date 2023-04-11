@@ -1,33 +1,64 @@
 {
-    "name": "@zdor/zdor-server",
+    "name": "@zdor/zdor-template",
     "version": "1.0.0",
-    "description": "",
-    "author": "",
-    "private": true,
-    "types": "dist/zdor-server.d.ts",
-    "bugs": {
-        "url": "https://github.com/ypf0088/zdor/issues"
-    },
-    "homepage": "https://github.com/ypf0088/zdor/tree/master/packages/zdor-server#readme",
+    "author": "zdor <ypf0088@gmail.com>",
     "scripts": {
+        "prepare": "husky install",
+        "start": "craco start",
+        "start:staging": "dotenv -e .env.staging craco start",
+        "build": "craco build",
+        "build:staging": "dotenv -e .env.staging craco build",
+        "test": "craco test",
+        "eject": "react-scripts eject",
+        "clean": "rm -r node_modules/.cache"
     },
     "dependencies": {
+        "axios": "^0.27.2",
+        "jspdf": "^2.5.1",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-router-dom": "^6.3.0"
     },
     "devDependencies": {
         "@commitlint/cli": "^16.2.3",
         "@commitlint/config-conventional": "^16.2.1",
+        "@testing-library/jest-dom": "^5.16.4",
+        "@testing-library/react": "^13.3.0",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.5.2",
+        "@types/node": "^16.11.43",
+        "@types/react": "^18.0.15",
+        "@types/react-dom": "^18.0.6",
         "@typescript-eslint/eslint-plugin": "^5.0.0",
         "@typescript-eslint/parser": "^5.0.0",
-        "@zdor/zdor-shared": "^1.0.0",
-        "cross-env": "^7.0.3",
-        "dotenv": "^16.0.0",
-        "eslint": "^8.0.1",
-        "eslint-config-prettier": "^8.3.0",
-        "eslint-plugin-prettier": "^4.0.0",
-        "husky": "^7.0.0",
-        "lint-staged": "^12.3.7",
-        "prettier": "^2.3.2",
-        "typescript": "^4.3.5"
+        "@zdor/zdor-shared": "^1.0.1",
+        "craco": "^0.0.3",
+        "craco-less": "^2.0.0",
+        "dotenv": "^16.0.1",
+        "dotenv-cli": "^6.0.0",
+        "eslint": "^8.19.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "husky": "^8.0.1",
+        "lint-staged": "^13.0.3",
+        "prettier": "^2.7.1",
+        "react-scripts": "5.0.1",
+        "resolve-url-loader": "^5.0.0",
+        "sass": "^1.53.0",
+        "typescript": "^4.7.4",
+        "webpack": "^5.73.0"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
     },
     "lint-staged": {
         "*": [

@@ -1,5 +1,6 @@
 # compiled output
 /dist
+/build
 /node_modules
 
 # Logs
@@ -10,6 +11,7 @@ pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
+.eslintcache
 
 # OS
 .DS_Store
@@ -29,8 +31,9 @@ lerna-debug.log*
 
 # IDE - VSCode
 .vscode/*
+!.vscode/snippet.code-snippets
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-.eslintcache
+/build

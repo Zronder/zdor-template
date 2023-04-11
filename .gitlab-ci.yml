@@ -1,0 +1,24 @@
+# 引入gitlab-ci模板
+include: https://git.n.xiaomi.com/miui_security_fe/gitlab-ci-template/-/raw/master/fds.yml
+
+variables:
+    #审核人
+    CI_APPROVER: yuepengfei@xiaomi.com
+
+    # 正式环境FDS Bucket域名（测试环境域名已在模板中声明）
+    FDS_ENDPOINT_PRODUCTION: cnbj1-fds.api.xiaomi.net
+    WORK_BRANCH_STAGING: 'staging'
+    WORK_BRANCH_PRODUCTION: 'master'
+    # 正式/测试环境，FDS文件路径
+    # FDS_BUCKET_PRODUCTION: privacy-policy-admin
+    # FDS_BUCKET_STAGING: privacy-policy-admin
+
+    # 部署到FDS的命令
+    PROJECT_DEPLOY_SCRIPT: fdscli sync $PROJECT_TARGET_DIR fds://$BUCKET/ -a
+
+    # 项目执行build命令生成的文件夹名称
+    PROJECT_TARGET_DIR: build
+
+    # 注：以下两个PROJECT_BUILD_SCRIPT只选择一个使用！
+    # or 若build命令相同，则可忽略if判断
+    PROJECT_BUILD_SCRIPT: if [ $CI_COMMIT_REF_NAME = 'master' ]; then yarn run build; elif [ $CI_COMMIT_REF_NAME = 'staging' ]; then yarn run build:staging; fi

@@ -1,0 +1,15 @@
+#root {
+    // text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    background: #eff3f4;
+    min-height: 100vh;
+    & > main {
+        flex: 1;
+        flex-direction: column;
+        background: #fff;
+        border: 20px solid #eff3f4;
+        overflow-x: scroll;
+    }
+}
